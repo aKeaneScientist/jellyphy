@@ -5,3 +5,7 @@ There is a shell script (jellyphy.sh) which takes contig files as input and then
 To run the program:
 
 bash jellyphy.sh /inputDir -o outputfile
+
+Python file can be ran seperately if wanted with the following command:
+
+python jellyphy.py --inputDir /inputDir > outputfile
