@@ -10,7 +10,7 @@ from scipy.spatial import distance
 
 def build_nestdict(folder):
 	#this takes the opened file and builds a dictionary then calls hash to hash it then adds it to nest then
-	#exits function, back to main which opens the next file? and repeats until no more files then.
+	#exits function, back to main which opens the next file and repeats until no more files.
 	nestdictstart=time.time()
 	Node=namedtuple=('Node',['key','value'])
 	nested_dict={}
