@@ -10,13 +10,13 @@ mkdir jfishmercounts2
 
 for index in $(seq 0 40);
 do
-	jellyfish count -m 14 -s 100M -t1 -C -o /home/keanea/algorithm2020/looptest/jfishoutput2/NCYC${arraystrain[index]}mercounts.jf /home/joShare/Ann-Marie/full_dataset/OG41/NCYC${arraystrain[index]}.fasta
-	jellyfish dump -c /home/keanea/algorithm2020/looptest/jfishoutput2/NCYC${arraystrain[index]}mercounts.jf_0 > /home/keanea/algorithm2020/looptest/jfishmercounts2/NCYC${arraystrain[index]}merdump.txt
+	jellyfish count -m 14 -s 100M -t1 -C -o /home/algorithm2020/looptest/jfishoutput2/NCYC${arraystrain[index]}mercounts.jf /home/full_dataset/OG41/NCYC${arraystrain[index]}.fasta
+	jellyfish dump -c /home/algorithm2020/looptest/jfishoutput2/NCYC${arraystrain[index]}mercounts.jf_0 > /home/algorithm2020/looptest/jfishmercounts2/NCYC${arraystrain[index]}merdump.txt
 done
 jfishend=`date +%s`
 echo Jellyfish k-mer counting execution time was `expr $jfishend - $jfishstart` seconds.
 
-python /home/keanea/algorithm2020/looptest/jellyphyfuncs.py --inputDir jfishmercounts2 --outputFile outmtx41_2620.txt > test41time2620.txt
+python /home/algorithm2020/looptest/jellyphyfuncs.py --inputDir jfishmercounts2 --outputFile outmtx41_2620.txt > test41time2620.txt
 
 end=`date +%s`
 echo Full program time was `expr $end - $start` seconds.
